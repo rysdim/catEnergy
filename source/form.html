@@ -2,9 +2,118 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>CatEnergy</title>
   </head>
   <body>
 
+    <header class="page-header">
+      <a class="page-header__logo-link" href="index.html">
+        <img class="page-header__brand-logo" src="http://placehold.it/33x38" width="33" height="38" alt="Логотип CatEnergy">
+        <img class="page-header__brand-name" src="http://placehold.it/101x18" width="101" height="18" alt="CatEnergy">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__link-list nav-list">
+            <li class="nav-list__item">
+              <a href="index.html">Главная</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="nav-list__item nav-list__item--current">
+              <a href="">Подбор программы</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page-main">
+      <h1 class="page-main__form-title">Подбор программы</h1>
+      <p class="page-main__form-hint">Заполните анкету и мы подберём <br>программу питания для вашего кота</p>
+
+      <form class="form" action="#" method="post">
+        <div class="centering-wrapper">
+          <div class="form__left-column">
+            <label>
+              Имя:<sup>*</sup>
+              <input class="form__text-input" type="text" name="customer-name" placeholder="Барсик" autofocus><br>
+            </label>
+            <label>
+              Вес (КГ):<sup>*</sup>
+              <input class="form__text-input" type="number" name="customer-weight" placeholder="5"><br>
+            </label>
+            <label>
+              Возраст (лет):
+              <input class="form__text-input" type="number" name="customer-age" placeholder="7"><br>
+            </label>
+          </div>
+          <div class="form__right-column form__radio-container">
+            <label><input class="form__radio-input" type="radio" name="nutrition-program" value="losing-weight">Похудение</label><br>
+            <label><input class="form__radio-input" type="radio" name="nutrition-program" value="weight-gain">Набор массы</label><br>
+            <label><input class="form__radio-input" type="radio" name="nutrition-program" value="i-dont-know">Не знаю (нужен ваш совет)</label><br>
+          </div>
+        </div>
+        <fieldset class="form__fieldset">
+          <legend class="form__legend form__legend--special-box">Контактные данные (владельца кота)</legend>
+          <div class="centering-wrapper">
+            <div class="form__left-column">
+              <label>e-mail:<sup>*</sup> <input class="form__text-input form__email-input" type="email" name="e-mail" placeholder="kuklachev@gmail.com"></label>
+            </div>
+            <div class="form__right-column">
+              <label>Телефон:<sup>*</sup> <input class="form__text-input form__tel-input" type="tel" name="phone-number" placeholder="+375(29)290-90-90"></label>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">Комментарии</legend>
+          <div class="centering-wrapper">
+            <textarea class="form__textarea" name="comment" rows="10" cols="30" placeholder="Расскажите обо всех повадках кота"></textarea>
+          </div>
+        </fieldset>
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">Дополнительно</legend>
+          <div class="centering-wrapper">
+            <div class="form__checkbox-container">
+              <label><input class="form__checkbox" type="checkbox" name="sweetener">Сахарозаменитель</label>
+              <label><input class="form__checkbox" type="checkbox" name="water">Питьевая вода</label>
+              <label><input class="form__checkbox" type="checkbox" name="milk">Молоко</label>
+              <label><input class="form__checkbox" type="checkbox" name="vitamins">Витамины</label>
+            </div>
+            <button class="form__submit button" type="submit">Отправить заявку</button>
+            <span class="form__footnote"><sup>*</sup> - Обязательные поля</span>
+          </div>
+        </fieldset>
+      </form>
+
+      <section class="contacts">
+        <h2 class="visually-hidden">Наши контакты</h2>
+        <div class="contacts__container">
+          <b class="contacts__message">Приглашаем к сотрудничеству дилеров!</b>
+          <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+        </div>
+        <div class="contacts__map-container">
+          <iframe></iframe>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__container">
+        <img class="page-footer__brand-name" src="http://placehold.it/128x24" width="128" height="24" alt="CatEnergy">
+        <ul class="page-footer__social-list">
+          <li><a class="page-footer__social-link page-footer__social-link--vkontakte" href="#">VKontakte</a></li>
+          <li><a class="page-footer__social-link page-footer__social-link--facebook" href="#">Facebook</a></li>
+          <li><a class="page-footer__social-link page-footer__social-link--instagram" href="#">Instagram</a></li>
+        </ul>
+        <div class="page-footer__copyright">
+          <a class="page-footer__copyright-link" href="#">
+            <span class="page-footer__developer-link">Dmitry Rysevets</span>
+            <img class="page-footer__developer-logo" src="http://placehold.it/27x34" width="27" height="34" alt="Логотип разработчика">
+          </a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
