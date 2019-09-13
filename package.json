@@ -1,11 +1,8 @@
 {
-  "name": "catenergy",
+  "name": "catEnergy",
   "version": "1.0.0",
-  "description": "",
+  "description": "Личный учебный проект",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rysdim/catEnergy.git"
@@ -15,9 +12,60 @@
   "bugs": {
     "url": "https://github.com/rysdim/catEnergy/issues"
   },
-  "homepage": "https://github.com/rysdim/catEnergy#readme",
+  "homepage": "https://github.com/rysdim/catEnergy",
   "devDependencies": {
     "gulp": "^4.0.2",
-    "gulp-less": "^4.0.1"
+    "gulp-build": "^0.5.3",
+    "gulp-csso": "^3.0.1",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-imagemin": "^6.0.0",
+    "gulp-less": "^4.0.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-posthtml": "^3.0.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-svgstore": "^6.1.1",
+    "gulp-uglify": "^3.0.0",
+    "gulp-webp": "^4.0.1",
+    "posthtml-include": "^1.1.0",
+    "run-sequence": "^2.2.1",
+    "stylelint": "^10.1.0",
+    "uglify-js": "^3.6.0",
+    "autoprefixer": "^8.3.0",
+    "browser-sync": "^2.26.7",
+    "del": "^3.0.0",
+    "@htmlacademy/editorconfig-cli": "1.x",
+    "stylelint-config-htmlacademy": "0.1.x"
+  },
+  "scripts": {
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
+    "test": "npm run editorconfig && npm run stylelint",
+    "build": "gulp --task",
+    "start": "npm run build && gulp serve"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "IE 11",
+    "Firefox ESR"
+  ],
+  "editorconfig-cli": [
+    "*.json",
+    "*.js",
+    "source/*.html",
+    "source/js/**/*.js",
+    "source/img/**/*.svg",
+    "source/less/**/*.{less}"
+  ],
+  "engines": {
+    "node": "12.10.0"
+  },
+  "dependencies": {
+    "handlebars": "^4.1.2",
+    "lodash": "^4.17.15",
+    "lodash.merge": "^4.6.2",
+    "natives": "^1.1.6",
+    "normalize.less": "^1.0.0",
+    "websocket": "^1.0.29"
   }
 }
