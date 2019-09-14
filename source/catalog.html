@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css"/>
     <title>CatEnergy</title>
   </head>
   <body>
@@ -16,26 +17,26 @@
         <div class="main-nav__wrapper">
           <ul class="main-nav__link-list nav-list">
             <li class="nav-list__item">
-              <a href="index.html">Главная</a>
+              <a class="nav-list__link" href="index.html">Главная</a>
             </li>
             <li class="nav-list__item nav-list__item--current">
-              <a>Каталог продукции</a>
+              <a class="nav-list__link">Каталог продукции</a>
             </li>
             <li class="nav-list__item">
-              <a href="form.html">Подбор программы</a>
+              <a class="nav-list__link" href="form.html">Подбор программы</a>
             </li>
           </ul>
         </div>
       </nav>
     </header>
 
-    <main class="page-main">
-      <h1 class="page-main__catalog-title">Каталог продукции</h1>
+    <main class="main-catalog">
+      <h1 class="main-catalog__catalog-title">Каталог продукции</h1>
 
-      <section class="main-goods">
-        <div class="main-goods__wrapper">
-          <ul class="main-goods__list">
-            <li class="main-goods__item product">
+      <section class="catalog">
+        <div class="catalog__wrapper">
+          <ul class="catalog__list">
+            <li class="catalog__item product">
               <img class="product__image" src="http://placehold.it/140x144" width="140" height="144" alt="Cat Energy Pro 500 г со вкусом курицы">
               <div class="product__name-container">
                 <h3 class="product__name">Cat Energy Pro 500 Г</h3>
@@ -57,7 +58,7 @@
               <a class="product__order button" href="#">Заказать</a>
             </li>
 
-            <li class="main-goods__item product">
+            <li class="catalog__item product">
               <img class="product__image" src="http://placehold.it/140x144" width="140" height="144" alt="Cat Energy Pro 1000 г со вкусом курицы">
               <div class="product__name-container">
                 <h3 class="product__name">Cat Energy Pro 1000 Г</h3>
@@ -79,7 +80,7 @@
               <a class="product__order button" href="#">Заказать</a>
             </li>
 
-            <li class="main-goods__item product">
+            <li class="catalog__item product">
               <img class="product__image" src="http://placehold.it/140x144" width="140" height="144" alt="Cat Energy Pro 500 г со вкусом рыбы">
               <div class="product__name-container">
                 <h3 class="product__name">Cat Energy Pro 500 Г</h3>
@@ -101,7 +102,7 @@
               <a class="product__order button" href="#">Заказать</a>
             </li>
 
-            <li class="main-goods__item product">
+            <li class="catalog__item product">
               <img class="product__image" src="http://placehold.it/140x144" width="140" height="144" alt="Cat Energy Pro 1000 г со вкусом рыбы">
               <div class="product__name-container">
                 <h3 class="product__name">Cat Energy Pro 1000 Г</h3>
@@ -123,7 +124,7 @@
               <a class="product__order button" href="#">Заказать</a>
             </li>
 
-            <li class="main-goods__item product">
+            <li class="catalog__item product">
               <img class="product__image" src="http://placehold.it/140x144" width="140" height="144" alt="Cat Energy Slim 500 г со вкусом гречки">
               <div class="product__name-container">
                 <h3 class="product__name">Cat Energy Slim 500 Г</h3>
@@ -145,7 +146,7 @@
               <a class="product__order button" href="#">Заказать</a>
             </li>
 
-            <li class="main-goods__item product">
+            <li class="catalog__item product">
               <img class="product__image" src="http://placehold.it/140x144" width="140" height="144" alt="Cat Energy Slim 1000 г со вкусом гречки">
               <div class="product__name-container">
                 <h3 class="product__name">Cat Energy Slim 1000 Г</h3>
@@ -167,7 +168,7 @@
               <a class="product__order button" href="#">Заказать</a>
             </li>
 
-            <li class="main-goods__item product">
+            <li class="catalog__item product">
               <img class="product__image" src="http://placehold.it/140x144" width="140" height="144" alt="Cat Energy Slim 500 г со вкусом риса">
               <div class="product__name-container">
                 <h3 class="product__name">Cat Energy Slim 500 Г</h3>
@@ -189,12 +190,12 @@
               <a class="product__order button" href="#">Заказать</a>
             </li>
 
-            <li class="main-goods__item more-goods">
+            <li class="catalog__item more-goods">
               <a class="more-goods__link" href="#">
                 <span class="more-goods__plus">+</span>
                 <h3 class="more-goods__title">Показать ещё 100500 товаров</h3>
                 <p class="more-goods__text">На самом деле вкусов гораздо больше!</p>
-                <div class="button--show-all">Показать все</div>
+                <span class="more-goods__show-all">Показать все</span>
               </a>
             </li>
           </ul>
@@ -232,7 +233,9 @@
               </li>
             </ul>
           </div>
-          <div class="gift-product"></div>
+          <div class="gift-product">
+            <p class="gift-product__text">Закажите все и получите чехол для кота в подарок!</p>
+          </div>
         </fieldset>
       </section>
 
@@ -243,7 +246,7 @@
           <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
         </div>
         <div class="contacts__map-container">
-          <iframe></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003006!2d30.32085871595745!3d59.938719169054345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sby!4v1568463016303!5m2!1sru!2sby" width="100%" height="362" frameborder="0" style="border:0;" allowfullscreen="">Карта проезда</iframe>
         </div>
       </section>
     </main>
