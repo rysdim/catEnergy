@@ -1,18 +1,43 @@
 .programs {
-  background-color: red;
+  width: @mobile-width;
 }
 
 .programs__list {
+  display: flex;
+  flex-direction: column;
   list-style: none;
-  padding: 0;
+  padding: 6px 20px;
 }
 
 .programs__item {
+  position: relative;
+  width: 280px;
+  min-height: 266px;
+  margin-bottom: 20px;
   background-color: #f2f2f2;
 }
 
+.programs__icon-first {
+  content: url("../img/icon-cat-slim.svg");
+  position: absolute;
+  height: 50px;
+  left: 29px;
+  top: 20px;
+  z-index: 1;
+}
+
+.programs__icon-second {
+  content: url("../img/icon-cat-pro.svg");
+  position: absolute;
+  width: 67px;
+  left: 13px;
+  top: 34px;
+  z-index: 1;
+}
+
 .programs__title {
-  margin: 0;
+  margin-top: 30px;
+  margin-left: 91px;
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   font-size: 24px;
@@ -20,13 +45,34 @@
   text-transform: uppercase;
 }
 
+.programs__title::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 25px;
+  left: 22px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: @base-green-color;
+}
+
 .programs__description {
+  max-width: 85%;
+  margin-top: 29px;
+  margin-left: 20px;
   color: #444444;
   font-size: 14px;
   line-height: 18px;
 }
 
 .programs__link {
+  display: inline-block;
+  width: 86%;
+  margin-top: 8px;
+  margin-left: 19px;
+  padding-top: 19px;
+  border-top: 1px solid #e3e3e3;
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 16px;
@@ -36,4 +82,40 @@
 .programs__link,
 .programs__link:visited {
   color: black;
+}
+
+.programs__arrow {
+  display: inline-block;
+  position: relative;
+  bottom: 5px;
+  left: 9px;
+  width: 18px;
+  height: 4px;
+  background-color: #3e4242;
+}
+
+.programs__arrow::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  bottom: -4px;
+  left: 18px;
+  border: 6px solid transparent;
+  border-left: 6px solid #3e4242;
+}
+
+@media (min-width: @tablet-width) {
+  .programs {
+    width: @tablet-width;
+  }
+  .programs__list {
+    margin-top: 240px;
+  }
+  .programs__item {
+    width: @tablet-content;
+    min-height: 370px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+  }
 }

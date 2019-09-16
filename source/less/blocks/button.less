@@ -1,13 +1,21 @@
 .button {
   border: none;
-  background-color: #68b738;
+  background-color: @base-green-color;
   color: white;
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .button:visited {
   color: white;
+}
+
+@media (min-width: @tablet-width) {
+  .button {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
