@@ -3,6 +3,16 @@
   display: flex;
   flex-direction: column;
   width: @mobile-width;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+    min-height: 120px;
+    flex-direction: row;
+  }
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+    min-height: 130px;
+  }
 }
 
 .page-header__logo-link {
@@ -10,27 +20,13 @@
   margin-top: 12px;
   margin-bottom: 9px;
   margin-left: 20px;
-}
 
-@media (min-width: @tablet-width) {
-  .page-header {
-    width: @tablet-width;
-    min-height: 120px;
-    flex-direction: row;
-  }
-  .page-header__logo-link {
+  @media (min-width: @tablet-width) {
     margin-top: 30px;
     margin-left: 30px;
     margin-right: 41px;
   }
-}
-
-@media (min-width: @desktop-width) {
-  .page-header {
-    width: @desktop-width;
-    min-height: 130px;
-  }
-  .page-header__logo-link {
+  @media (min-width: @desktop-width) {
     margin-top: 50px;
     margin-left: 40px;
     margin-right: 513px;

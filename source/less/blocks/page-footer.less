@@ -11,11 +11,31 @@
   min-height: 236px;
   padding: 20px;
   box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    width: @tablet-width;
+    min-height: 150px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 15px;
+  }
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+  }
 }
 
 .page-footer__brand-name {
   padding-top: 16px;
   padding-bottom: 31px;
+
+  @media (min-width: @tablet-width) {
+    width: 18.2%;
+    padding-top: 30px;
+  }
+  @media (min-width: @desktop-width) {
+    width: 12%;
+  }
 }
 
 .page-footer__social-list {
@@ -29,6 +49,14 @@
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 5%;
+    border: none;
+  }
+  @media (min-width: @desktop-width) {
+    margin-left: 2.5%;
+  }
 }
 
 .page-footer__social-link {
@@ -36,21 +64,40 @@
   width: 56px;
   height: 62px;
   margin-top: 3px;
+
+  @media (min-width: @tablet-width) {
+    width: 54px;
+    margin-top: 0;
+  }
 }
 
 .page-footer__social-link--vk {
   background: url("../img/sprite-icon-vk-mobile.svg") no-repeat 50% 50%;
   background-size: 40%;
+
+  @media (min-width: @tablet-width) {
+    background-size: 54%;
+  }
 }
 
 .page-footer__social-link--fb {
   background: url("../img/sprite-icon-fb-mobile.svg") no-repeat 44% 51%;
   background-size: 18%;
+
+  @media (min-width: @tablet-width) {
+    background-position: 35% 51%;
+    background-size: 27%;
+  }
 }
 
 .page-footer__social-link--inst {
   background: url("../img/sprite-icon-insta-mobile.svg") no-repeat 50% 50%;
   background-size: 29%;
+
+  @media (min-width: @tablet-width) {
+    background-position: 52% 52%;
+    background-size: 43%;
+  }
 }
 
 .page-footer__copyright {
@@ -60,6 +107,15 @@
   align-items: center;
   width: 100%;
   margin-top: 22px;
+
+  @media (min-width: @tablet-width) {
+    width: 44%;
+    margin-top: 0px;
+  }
+  @media (min-width: @desktop-width) {
+    width: 20%;
+    margin-right: 10px;
+  }
 }
 
 .page-footer__copyright-link,
@@ -69,63 +125,15 @@
   line-height: 16px;
 }
 
-@media (min-width: @tablet-width) {
-  .page-footer__container {
-    flex-direction: row;
-    width: @tablet-width;
-    min-height: 150px;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 15px;
-  }
-  .page-footer__brand-name {
-    width: 18.2%;
-    padding-top: 30px;
-  }
-  .page-footer__social-list {
-    margin-left: 5%;
-    border: none;
-  }
-  .page-footer__social-link {
-    width: 54px;
-    margin-top: 0;
-  }
-  .page-footer__social-link--vk {
-    background-size: 54%;
-  }
-  .page-footer__social-link--fb {
-    background-position: 35% 51%;
-    background-size: 27%;
-  }
-  .page-footer__social-link--inst {
-    background-position: 52% 52%;
-    background-size: 43%;
-  }
-  .page-footer__copyright {
-    width: 44%;
-    margin-top: 0px;
-  }
-  .page-footer__copyright-link {
+.page-footer__copyright-link {
+  @media (min-width: @tablet-width) {
     align-self: flex-start;
-  }
-  .page-footer__developer-link {
-    position: relative;
-    top: 8px;
   }
 }
 
-@media (min-width: @desktop-width) {
-  .page-footer__container {
-    width: @desktop-width;
-  }
-  .page-footer__brand-name {
-    width: 12%;
-  }
-  .page-footer__social-list {
-    margin-left: 2.5%;
-  }
-  .page-footer__copyright {
-    width: 20%;
-    margin-right: 10px;
+.page-footer__developer-link {
+  @media (min-width: @tablet-width) {
+    position: relative;
+    top: 8px;
   }
 }
