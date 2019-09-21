@@ -2,11 +2,130 @@
   background-color: #f2f2f2;
 }
 
-.page-footer__social-link,
+.page-footer__container {
+  .container;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: @mobile-width;
+  min-height: 236px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.page-footer__brand-name {
+  padding-top: 16px;
+  padding-bottom: 31px;
+}
+
+.page-footer__social-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 62px;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+  list-style: none;
+}
+
+.page-footer__social-link {
+  display: inline-block;
+  width: 56px;
+  height: 62px;
+  margin-top: 3px;
+}
+
+.page-footer__social-link--vk {
+  background: url("../img/sprite-icon-vk-mobile.svg") no-repeat 50% 50%;
+  background-size: 40%;
+}
+
+.page-footer__social-link--fb {
+  background: url("../img/sprite-icon-fb-mobile.svg") no-repeat 44% 51%;
+  background-size: 18%;
+}
+
+.page-footer__social-link--inst {
+  background: url("../img/sprite-icon-insta-mobile.svg") no-repeat 50% 50%;
+  background-size: 29%;
+}
+
+.page-footer__copyright {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 22px;
+}
+
 .page-footer__copyright-link,
-.page-footer__social-link:visited,
 .page-footer__copyright-link:visited {
   color: #444444;
   font-size: 16px;
   line-height: 16px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__container {
+    flex-direction: row;
+    width: @tablet-width;
+    min-height: 150px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 15px;
+  }
+  .page-footer__brand-name {
+    width: 18.2%;
+    padding-top: 30px;
+  }
+  .page-footer__social-list {
+    margin-left: 5%;
+    border: none;
+  }
+  .page-footer__social-link {
+    width: 54px;
+    margin-top: 0;
+  }
+  .page-footer__social-link--vk {
+    background-size: 54%;
+  }
+  .page-footer__social-link--fb {
+    background-position: 35% 51%;
+    background-size: 27%;
+  }
+  .page-footer__social-link--inst {
+    background-position: 52% 52%;
+    background-size: 43%;
+  }
+  .page-footer__copyright {
+    width: 44%;
+    margin-top: 0px;
+  }
+  .page-footer__copyright-link {
+    align-self: flex-start;
+  }
+  .page-footer__developer-link {
+    position: relative;
+    top: 8px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer__container {
+    width: @desktop-width;
+  }
+  .page-footer__brand-name {
+    width: 12%;
+  }
+  .page-footer__social-list {
+    margin-left: 2.5%;
+  }
+  .page-footer__copyright {
+    width: 20%;
+    margin-right: 10px;
+  }
 }

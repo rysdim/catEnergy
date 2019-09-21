@@ -1,12 +1,14 @@
 .programs {
+  .container;
   width: @mobile-width;
 }
 
 .programs__list {
   display: flex;
   flex-direction: column;
-  list-style: none;
   padding: 6px 20px;
+  margin-bottom: 0;
+  list-style: none;
 }
 
 .programs__item {
@@ -90,7 +92,7 @@
   bottom: 5px;
   left: 9px;
   width: 18px;
-  height: 4px;
+  height: 3px;
   background-color: #3e4242;
 }
 
@@ -100,8 +102,8 @@
   position: absolute;
   bottom: -4px;
   left: 18px;
-  border: 6px solid transparent;
-  border-left: 6px solid #3e4242;
+  border: 5.5px solid transparent;
+  border-left: 5.5px solid #3e4242;
 }
 
 @media (min-width: @tablet-width) {
@@ -117,5 +119,98 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
+  }
+  .programs__title {
+    margin-top: 75px;
+    margin-left: 54px;
+    margin-bottom: -3px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+  .programs__description {
+    max-width: 53%;
+    margin-left: 53px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .programs__description-second{
+    max-width: 48%;
+  }
+  .programs__link {
+    margin-top: 23px;
+    margin-left: 54px;
+    border-top: none;
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .programs__arrow {
+    bottom: 7px;
+    left: 18px;
+  }
+  .programs__icon-first {
+    height: 195px;
+    left: 476px;
+    top: 79px;
+  }
+  .programs__icon-second {
+    width: 268px;
+    left: 412px;
+    top: 134px;
+  }
+  .programs__title::before {
+    top: 90px;
+    left: 447px;
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .programs {
+    width: @desktop-width;
+  }
+  .programs__list {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 93.7%;
+    margin: 0 auto;
+  }
+  .programs__item {
+    width: 570px;
+    min-height: 372px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .programs__title {
+    margin-top: 77px;
+    margin-left: 213px;
+    margin-bottom: 74px;
+  }
+  .programs__description {
+    max-width: 83%;
+    margin-left: 51px;
+    margin-bottom: -11px;
+  }
+  .programs__link {
+    margin-left: 51px;
+    border-top: none;
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .programs__icon-first {
+    height: 97px;
+    left: 65px;
+    top: 39px;
+  }
+  .programs__icon-second {
+    width: 134px;
+    left: 34px;
+    top: 69px;
+  }
+  .programs__title::before {
+    top: 47px;
+    left: 52px;
+    width: 100px;
+    height: 100px;
   }
 }
