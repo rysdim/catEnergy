@@ -1,8 +1,25 @@
 .catalog {
-
+  margin-bottom: 31px;
 }
 
 .catalog__list {
+  display: flex;
+  flex-direction: column;
+  width: @mobile-width;
+  box-sizing: border-box;
+  .container;
   padding: 0;
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: @tablet-width;
+    padding: 0 30px;
+  }
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+    padding: 0 40px;
+  }
 }

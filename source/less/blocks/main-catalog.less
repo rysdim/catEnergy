@@ -3,9 +3,28 @@
 }
 
 .main-catalog__catalog-title {
-  margin: 0;
+  .container;
+  width: @mobile-width - 20px;
+  padding-top: 15px;
+  padding-left: 20px;
+  margin-bottom: 28px;
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   font-size: 36px;
   line-height: 60px;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width - 30px;
+    padding-top: 20px;
+    padding-left: 30px;
+    margin-bottom: 25px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+    padding-top: 58px;
+    padding-left: 78px;
+    margin-bottom: 24px;
+  }
 }

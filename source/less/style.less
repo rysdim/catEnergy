@@ -11,7 +11,7 @@ body {
 }
 
 @media (min-width: @desktop-width) {
-  body {
+  .index-desk-back {
     background-image: url("../img/index-background-desktop@2x.jpg");
     background-repeat: no-repeat;
     background-position: 100% 0;
@@ -36,22 +36,17 @@ a {
   margin: -1px;
 }
 
-@import "../temp/outlines.less";
-
-// @media (min-width: @tablet-width) {
-// }
-// @media (min-width: @desktop-width) {
-// }
+// @import "../temp/outlines.less";
 
 /*---------------------------------*\
     универсальные блоки
 \*---------------------------------*/
+@import "blocks/button.less";
 @import "blocks/page-header.less";
 @import "blocks/main-nav.less";
 @import "blocks/nav-list.less";
 @import "blocks/contacts.less";
 @import "blocks/page-footer.less";
-@import "blocks/button.less";
 
 
 
@@ -66,7 +61,7 @@ a {
 
 
 /*---------------------------------*\
-    form.html
+    catalog.html
 \*---------------------------------*/
 @import "blocks/main-catalog.less";
 @import "blocks/catalog.less";
@@ -78,7 +73,7 @@ a {
 
 
 /*---------------------------------*\
-    catalog.html
+    form.html
 \*---------------------------------*/
 @import "blocks/main-form.less";
 @import "blocks/form.less";

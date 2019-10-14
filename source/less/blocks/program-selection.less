@@ -12,11 +12,13 @@
   @media (min-width: @tablet-width) {
     align-items: flex-start;
     width: @tablet-width;
+    margin-bottom: 524px;
     background-image: none;
   }
   @media (min-width: @desktop-width) {
     width: @desktop-width;
     height: 640px;
+    margin-bottom: 0;
   }
 }
 
@@ -65,33 +67,30 @@
 
   @media (min-width: @tablet-width) {
     order: 4;
-    position: relative;
-    top: -40px;
-    left: 200px;
+    position: absolute;
+    top: 240px;
+    left: 240px;
   }
   @media (min-width: @desktop-width) {
-    top: -380px;
+    top: 80px;
     left: 580px;
   }
 }
 
 .program-selection__link {
-  height: 27px;
+  height: 40px;
   width: 87.5%;
   margin-top: 3px;
-  padding-top: 13px;
 
   @media (min-width: @tablet-width) {
     order: 3;
     z-index: 1;
     width: 245px;
-    height: 37px;
-    padding-top: 15px;
+    height: 52px;
     margin-left: 119px;
     margin-top: 28px;
   }
   @media (min-width: @desktop-width) {
-    padding-bottom: 17px;
     margin-left: 120px;
     margin-top: 33px;
   }

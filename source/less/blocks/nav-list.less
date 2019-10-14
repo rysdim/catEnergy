@@ -36,15 +36,20 @@
   }
 }
 
+.nav-list__link--black,
+.nav-list__link--black:visited {
+  color: black;
+}
+
 .nav-list__item {
   height: 43px;
-  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
   text-align: center;
   padding-top: 22px;
   letter-spacing: 0.6px;
 
   @media (min-width: @tablet-width) {
-    border-top: none;
+    border-bottom: none;
     letter-spacing: -0.1px;
   }
   @media (min-width: @desktop-width) {

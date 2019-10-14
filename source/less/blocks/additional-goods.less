@@ -1,31 +1,187 @@
 .additional-goods {
+  margin-bottom: 12px;
+}
 
+.additional-goods__fieldset {
+  border: none;
+  border-top: 3px solid #68b738;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 72px;
+    margin-bottom: 46px;
+  }
+  @media (min-width: @desktop-width) {
+    margin-top: 80px;
+    margin-bottom: 0;
+  }
 }
 
 .additional-goods__legend {
+  position: relative;
+  top: -4px;
+  margin-left: -4px;
+  padding-left: 23px;
+  padding-right: 23px;
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
+
+  @media (min-width: @tablet-width) {
+    top: -5px;
+    margin-left: 3.8%;
+    padding-left: 38px;
+    padding-right: 38px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+  @media (min-width: @desktop-width) {
+    margin-left: 3.2%;
+  }
+}
+
+.additional-goods__wrapper {
+  .container;
+  width: @mobile-width;
+  box-sizing: border-box;
+  padding: 20px;
+  padding-top: 15px;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+    padding: 30px;
+  }
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 75px 40px 5px 40px;
+  }
 }
 
 .additional-goods__list {
   padding: 0;
+  margin-bottom: 40px;
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 45px;
+    margin-bottom: 69px;
+  }
+  @media (min-width: @desktop-width) {
+    width: 73.3%;
+    margin-top: 0;
+  }
+}
+
+.additional-goods__item {
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 1px solid #cdcdcd;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 25px;
+    border: 1px solid #cdcdcd;
+    border-bottom: none;
+  }
+  @media (min-width: @desktop-width) {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 71px;
+    padding: 0;
+    border: none;
+    border-top: 1px solid #cdcdcd;
+  }
+}
+
+.additional-goods__item:last-child {
+  border-bottom: 1px solid #cdcdcd;
 }
 
 .additional-goods__item-name {
+  width: 100%;
+  margin-top: 13px;
+  margin-bottom: 13px;
   color: #222222;
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    width: 50%;
+    box-sizing: border-box;
+    padding-left: 38px;
+    margin-top: 0;
+    margin-bottom: 11px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+  @media (min-width: @desktop-width) {
+    width: 33%;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
 }
 
 .additional-goods__quantity,
 .additional-goods__price {
+  width: 50%;
   color: #444444;
   font-size: 14px;
   line-height: 14px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 5px;
+  }
+}
+
+.additional-goods__quantity {
+  @media (min-width: @tablet-width) {
+    width: 31.5%;
+    text-align: right;
+  }
+  @media (min-width: @desktop-width) {
+    width: 24%;
+    text-align: left;
+  }
+}
+
+.additional-goods__price {
+  text-align: right;
+
+  @media (min-width: @tablet-width) {
+    width: 13.5%;
+    padding-right: 30px;
+  }
+  @media (min-width: @desktop-width) {
+    width: 6%;
+    padding-right: 0;
+    text-align: left;
+  }
+}
+
+.additional-goods__order {
+  height: 40px;
+  width: 100%;
+  padding: 0;
+  margin-top: 15px;
+  margin-bottom: 17px;
+  font-size: 16px;
+
+  @media (min-width: @tablet-width) {
+    width: 89.8%;
+    margin: 15px auto 27px auto;
+  }
+  @media (min-width: @desktop-width) {
+    width: 27.4%;
+    margin: 0;
+  }
 }

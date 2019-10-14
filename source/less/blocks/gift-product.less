@@ -1,12 +1,64 @@
 .gift-product {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   width: 280px;
   height: 289px;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+    height: 200px;
+    background-image: url("../img/gift-photo-tablet@2x.jpg");
+    background-size: contain;
+  }
+  @media (min-width: @desktop-width) {
+    width: 245px;
+    height: 289px;
+    background-image: url("../img/gift-photo-desktop@2x.jpg");
+  }
+}
+
+.gift-product__text::after {
+  content: "";
+  position: absolute;
+  top: 65px;
+  left: 50% - 10px;
+  width: 55px;
+  height: 60px;
+  background-image: url("../img/icon-gift.svg");
+  background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    left: 13%;
+  }
+  @media (min-width: @desktop-width) {
+    left: 50% - 11px;
+  }
 }
 
 .gift-product__text {
+  align-self: center;
+  width: 60%;
+  margin-bottom: 42px;
   color: white;
   font-size: 16px;
   line-height: 20px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    align-self: flex-end;
+    width: 25%;
+    margin: 0 108px 68px 0;
+    text-align: left;
+  }
+  @media (min-width: @desktop-width) {
+    align-self: center;
+    width: 70%;
+    margin: 0;
+    margin-bottom: 42px;
+    text-align: center;
+  }
 }
